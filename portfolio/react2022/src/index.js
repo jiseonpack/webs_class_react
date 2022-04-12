@@ -1,12 +1,12 @@
-//컴퍼넌트
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import "./style.scss";
+import App from "./App";
 
-function Hello(props){
-  return <h1>hello, {props.name}</h1>
-}
+const rootNode = document.getElementById('root');
 
-const element = <Hello name="webs" />;
-
-ReactDOM.render(element, document.getElementById("root"));
-
+ReactDOM.createRoot(rootNode).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+);
